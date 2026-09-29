@@ -1,6 +1,6 @@
 {
-  "grid_intensity_gco2_per_kwh": 217,
-  "grid_intensity_source": "UK power-sector CO2 intensity (2025), gCO2/kWh -- Ember yearly electricity data, https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv",
+  "grid_intensity_gco2_per_kwh": 218,
+  "grid_intensity_source": "UK electricity emissions intensity (2025), gCO2e/kWh -- Ember yearly electricity data (https://ember-energy.org/data/yearly-electricity-data/), https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_yearly_global.csv",
   "items": [
     {"id": "washing_machine_cycle", "label": "washing machine cycle", "kg_co2": 0.7, "source": "https://www.co2everything.com/"},
     {"id": "ev_car_km", "label": "km driven in a 2020 Tesla Model 3", "kg_co2": 0.081, "source": "https://www.co2everything.com/"},
