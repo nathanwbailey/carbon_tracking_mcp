@@ -1,6 +1,6 @@
 {
-  "grid_intensity_gco2_per_kwh": 141,
-  "grid_intensity_source": "UK grid carbon intensity average (2026), gCO2/kWh -- https://www.purelyenergy.co.uk/grid-report/2026",
+  "grid_intensity_gco2_per_kwh": 217,
+  "grid_intensity_source": "UK power-sector CO2 intensity (2025), gCO2/kWh -- Ember yearly electricity data, https://ember-energy.org/data/yearly-electricity-data/",
   "items": [
     {"id": "washing_machine_cycle", "label": "washing machine cycle", "kg_co2": 0.7, "source": "https://www.co2everything.com/"},
     {"id": "ev_car_km", "label": "km driven in a 2020 Tesla Model 3", "kg_co2": 0.081, "source": "https://www.co2everything.com/"},

@@ -19,7 +19,7 @@ from mcps.schema import CO2Comparison, CO2Summary
 
 _DATA_PATH = Path(__file__).parent / "carbon_equivalents.json"
 
-UK_GRID_GCO2_PER_KWH = 141.0
+UK_GRID_GCO2_PER_KWH = 217.0
 
 
 def kwh_to_co2_kg(kwh: float, intensity_gco2_per_kwh: float = UK_GRID_GCO2_PER_KWH) -> float:
