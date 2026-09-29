@@ -32,7 +32,6 @@ export default function Methodology() {
       <ul className="notes">
         <li>Short requests are overestimated and very long ones underestimated, because one rate covers all context lengths.</li>
         <li>The model name is ignored, so every model gets the same rates.</li>
-        <li>Scenario token counts are illustrative assumptions, not measurements.</li>
         <li>{grid.note}</li>
         <li>Comparisons are not grid-dependent: {EQUIVALENTS.map((e) => e.label).join("; ")}.</li>
       </ul>
