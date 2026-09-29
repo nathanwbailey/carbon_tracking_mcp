@@ -1,15 +1,15 @@
 {
   "note": "Values are Ember's 2025 power-sector CO2 intensity (CC-BY 4.0), except California, which is not covered. The UK row is also the MCP default.",
   "regions": [
-    {"id": "uk", "label": "United Kingdom (MCP default)", "gco2_per_kwh": 217, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
-    {"id": "eu", "label": "European Union", "gco2_per_kwh": 209, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
-    {"id": "de", "label": "Germany", "gco2_per_kwh": 330, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
-    {"id": "fr", "label": "France", "gco2_per_kwh": 41, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
-    {"id": "se", "label": "Sweden", "gco2_per_kwh": 35, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
-    {"id": "pl", "label": "Poland", "gco2_per_kwh": 591, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
-    {"id": "us", "label": "United States", "gco2_per_kwh": 384, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
-    {"id": "cn", "label": "China", "gco2_per_kwh": 526, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
-    {"id": "in", "label": "India", "gco2_per_kwh": 671, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
-    {"id": "world", "label": "World average", "gco2_per_kwh": 458, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"}
+    {"id": "uk", "label": "United Kingdom (MCP default)", "gco2_per_kwh": 217, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"},
+    {"id": "eu", "label": "European Union", "gco2_per_kwh": 209, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"},
+    {"id": "de", "label": "Germany", "gco2_per_kwh": 330, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"},
+    {"id": "fr", "label": "France", "gco2_per_kwh": 41, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"},
+    {"id": "se", "label": "Sweden", "gco2_per_kwh": 35, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"},
+    {"id": "pl", "label": "Poland", "gco2_per_kwh": 591, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"},
+    {"id": "us", "label": "United States", "gco2_per_kwh": 384, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"},
+    {"id": "cn", "label": "China", "gco2_per_kwh": 526, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"},
+    {"id": "in", "label": "India", "gco2_per_kwh": 671, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"},
+    {"id": "world", "label": "World average", "gco2_per_kwh": 458, "year": 2025, "source": "https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv"}
   ]
 }
