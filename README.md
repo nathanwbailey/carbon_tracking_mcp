@@ -23,8 +23,8 @@ Example output:
   "estimated_kwh": 1.018,
   "estimated_kg_co2": 0.144,
   "comparisons": [
-    {"id": "washing_machine_cycle", "label": "washing machine cycle", "count": 0.14},
-    {"id": "kettle_boil", "label": "kettle boil", "count": 1.44}
+    {"id": "washing_machine_cycle", "label": "washing machine cycle", "count": 0.21},
+    {"id": "ev_car_km", "label": "km driven in a 2020 Tesla Model 3", "count": 1.78}
   ]
 }
 ```
@@ -41,7 +41,7 @@ Example output:
   ],
   "estimated_kg_co2": 0.218,
   "comparisons": [
-    {"id": "washing_machine_cycle", "label": "washing machine cycle", "count": 0.22}
+    {"id": "washing_machine_cycle", "label": "washing machine cycle", "count": 0.31}
   ]
 }
 ```
@@ -129,6 +129,22 @@ Treat every number here as **order-of-magnitude and directional** — useful for
 
 Same caveat as above: this is a rough, directional comparison, not an audited figure — grid intensity varies by country, time of day, and year.
 
+## Dashboard
+
+A small web dashboard lets anyone (for example a sustainability team) enter input, output and cached token counts and see the energy, CO2e and everyday equivalents, with scenario presets and a grid-intensity selector. It will be published at <https://nathanwbailey.github.io/carbon_tracking_mcp/>.
+
+The dashboard reads its rates from `web/src/data/model.json`, generated from the Python model, so it cannot drift from the MCP tools: `uv run pytest` fails if the file is stale. Regenerate it with `uv run python scripts/export_dashboard_data.py`.
+
+```bash
+cd web
+npm install
+npm run dev     # local dev server
+npm test        # parity tests against the Python model
+npm run build   # production build into web/dist
+```
+
+Pushes to `main` that touch the dashboard or the model deploy it via `.github/workflows/pages.yml` (repo Settings -> Pages -> Source: GitHub Actions).
+
 ## Project layout
 
 ```
@@ -143,6 +159,9 @@ src/mcps/
   stdio/
     server_claude.py       # FastMCP server for Claude Code sessions
     server_codex.py        # FastMCP server for Codex sessions
+scripts/
+  export_dashboard_data.py # writes web/src/data/model.json from the Python model (--check in CI)
+web/                       # Vite + React dashboard, deployed to GitHub Pages
 ```
 
 ## License

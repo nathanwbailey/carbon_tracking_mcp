@@ -1,0 +1,15 @@
+{
+  "note": "Ember values are 2025 power-sector CO2 intensity (CC-BY 4.0). The UK row is the MCP default (Purely Energy 2026) so dashboard numbers match the MCP; Ember's own 2025 UK figure is 217 gCO2/kWh.",
+  "regions": [
+    {"id": "uk", "label": "United Kingdom (MCP default)", "gco2_per_kwh": 141, "year": 2026, "source": "https://www.purelyenergy.co.uk/grid-report/2026"},
+    {"id": "eu", "label": "European Union", "gco2_per_kwh": 209, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
+    {"id": "de", "label": "Germany", "gco2_per_kwh": 330, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
+    {"id": "fr", "label": "France", "gco2_per_kwh": 41, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
+    {"id": "se", "label": "Sweden", "gco2_per_kwh": 35, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
+    {"id": "pl", "label": "Poland", "gco2_per_kwh": 591, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
+    {"id": "us", "label": "United States", "gco2_per_kwh": 384, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
+    {"id": "cn", "label": "China", "gco2_per_kwh": 526, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
+    {"id": "in", "label": "India", "gco2_per_kwh": 671, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"},
+    {"id": "world", "label": "World average", "gco2_per_kwh": 458, "year": 2025, "source": "https://ember-energy.org/data/yearly-electricity-data/"}
+  ]
+}

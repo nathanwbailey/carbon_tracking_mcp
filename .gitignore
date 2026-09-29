@@ -11,3 +11,11 @@ wheels/
 
 # Test artifacts
 .pytest_cache/
+
+# Verification-skill isolated runs and captured proof
+.verify-runs/
+.cursor/skills/verify-carbon-tracking-mcp/evidence/
+
+# Dashboard
+web/node_modules/
+web/dist/
