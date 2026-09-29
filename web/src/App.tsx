@@ -6,7 +6,6 @@ import TokenInput from "./components/TokenInput";
 import grid from "./data/grid_intensity.json";
 import { estimateEnergyKwh, kwhToCo2Kg, type Tokens } from "./lib/energy";
 import { formatCo2, formatEnergy } from "./lib/format";
-import { SCENARIOS } from "./lib/scenarios";
 import { SERIES_COLORS, useTheme } from "./lib/theme";
 
 const FIELDS: { key: keyof Tokens; label: string; hint: string }[] = [
@@ -16,10 +15,11 @@ const FIELDS: { key: keyof Tokens; label: string; hint: string }[] = [
   { key: "cacheWrite", label: "Cache write tokens", hint: "Prompt tokens written to cache" },
 ];
 
+const DEFAULT_TOKENS: Tokens = { input: 1_000_000, output: 250_000, cacheRead: 5_000_000, cacheWrite: 500_000 };
+
 export default function App() {
   const [theme, toggleTheme] = useTheme();
-  const [tokens, setTokens] = useState<Tokens>(SCENARIOS[1].tokens);
-  const [scenarioId, setScenarioId] = useState<string | null>(SCENARIOS[1].id);
+  const [tokens, setTokens] = useState<Tokens>(DEFAULT_TOKENS);
   const [regionId, setRegionId] = useState(grid.regions[0].id);
 
   const region = grid.regions.find((r) => r.id === regionId) ?? grid.regions[0];
@@ -41,29 +41,6 @@ export default function App() {
         </button>
       </header>
 
-      <section className="card" aria-labelledby="scen-h">
-        <h2 id="scen-h">Start from a scenario</h2>
-        <div className="chips" role="group" aria-label="Scenarios">
-          {SCENARIOS.map((s) => (
-            <button
-              key={s.id}
-              type="button"
-              className="chip"
-              aria-pressed={scenarioId === s.id}
-              onClick={() => {
-                setTokens(s.tokens);
-                setScenarioId(s.id);
-              }}
-            >
-              {s.label}
-            </button>
-          ))}
-        </div>
-        <p className="hint">
-          {SCENARIOS.find((s) => s.id === scenarioId)?.description ?? "Custom token counts."} Illustrative assumptions.
-        </p>
-      </section>
-
       <div className="layout">
         <section className="card" aria-labelledby="calc-h">
           <h2 id="calc-h">Tokens</h2>
@@ -75,10 +52,7 @@ export default function App() {
               hint={f.hint}
               color={colors[i]}
               value={tokens[f.key]}
-              onChange={(n) => {
-                setTokens({ ...tokens, [f.key]: n });
-                setScenarioId(null);
-              }}
+              onChange={(n) => setTokens({ ...tokens, [f.key]: n })}
             />
           ))}
           <div className="region">

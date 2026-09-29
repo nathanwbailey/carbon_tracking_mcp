@@ -55,13 +55,11 @@ a { color: var(--accent); }
 .results { display: grid; gap: 16px; min-width: 0; }
 @media (max-width: 760px) { .layout { grid-template-columns: minmax(0, 1fr); } }
 
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
-.chip, .link-btn {
+.link-btn {
   font: inherit; cursor: pointer; color: var(--text-primary);
   background: transparent; border: 1px solid var(--grid); border-radius: 999px; padding: 6px 14px;
 }
 .link-btn { border-radius: 8px; padding: 4px 10px; white-space: nowrap; font-size: 0.9rem; }
-.chip[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
 button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .token-input { padding: 8px 0 12px; border-bottom: 1px solid var(--grid); }

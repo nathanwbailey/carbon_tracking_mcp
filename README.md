@@ -131,7 +131,7 @@ Same caveat as above: this is a rough, directional comparison, not an audited fi
 
 ## Dashboard
 
-A small web dashboard lets anyone (for example a sustainability team) enter input, output and cached token counts and see the energy, CO2e and everyday equivalents, with scenario presets and a grid-intensity selector. It will be published at <https://nathanwbailey.github.io/carbon_tracking_mcp/>.
+A small web dashboard lets anyone (for example a sustainability team) enter input, output and cached token counts and see the energy, CO2e and everyday equivalents, with a grid-intensity selector. It will be published at <https://nathanwbailey.github.io/carbon_tracking_mcp/>.
 
 The dashboard reads its rates from `web/src/data/model.json`, generated from the Python model, so it cannot drift from the MCP tools: `uv run pytest` fails if the file is stale. Regenerate it with `uv run python scripts/export_dashboard_data.py`.
 
